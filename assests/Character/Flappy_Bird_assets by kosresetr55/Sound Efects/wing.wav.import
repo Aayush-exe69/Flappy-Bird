@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://2whmyebjt3d0"
+path="res://.godot/imported/wing.wav-296879f8b6b852bea98f154d20ef6ad8.sample"
+
+[deps]
+
+source_file="res://assests/Character/Flappy_Bird_assets by kosresetr55/Sound Efects/wing.wav"
+dest_files=["res://.godot/imported/wing.wav-296879f8b6b852bea98f154d20ef6ad8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

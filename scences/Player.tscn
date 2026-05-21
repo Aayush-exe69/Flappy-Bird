@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bxit2guak54rm"]
+
+[ext_resource type="Texture2D" uid="uid://baithrqv17uq3" path="res://assests/Character/Flappy_Bird_assets by kosresetr55/Game Objects/yellowbird-downflap.png" id="1_8ffg1"]
+[ext_resource type="Texture2D" uid="uid://b5eakyaxnddmp" path="res://assests/Character/Flappy_Bird_assets by kosresetr55/Game Objects/yellowbird-midflap.png" id="2_l6irc"]
+[ext_resource type="Texture2D" uid="uid://cjfa84oakaw5j" path="res://assests/Character/Flappy_Bird_assets by kosresetr55/Game Objects/yellowbird-upflap.png" id="3_tsw5k"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_an55w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8ffg1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_l6irc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tsw5k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_srd45"]
+radius = 5.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1901554004]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2146961951]
+sprite_frames = SubResource("SpriteFrames_an55w")
+autoplay = "default"
+frame_progress = 0.6666858
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=894309630]
+shape = SubResource("CircleShape2D_srd45")
