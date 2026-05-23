@@ -2,15 +2,17 @@
 
 [ext_resource type="PackedScene" uid="uid://bxit2guak54rm" path="res://scences/Player.tscn" id="1_am3uj"]
 [ext_resource type="Script" uid="uid://bw2g4j1aktm3p" path="res://scripts/main.gd" id="1_cfdqf"]
+[ext_resource type="PackedScene" uid="uid://d4hp5c5lu18t5" path="res://scences/area_2d.tscn" id="2_41s58"]
 [ext_resource type="PackedScene" uid="uid://c7n27votr026b" path="res://scences/ground.tscn" id="4_3if0j"]
 [ext_resource type="Texture2D" uid="uid://di7qssv0fn8li" path="res://assests/Character/Flappy_Bird_assets by kosresetr55/Game Objects/background-day.png" id="5_41s58"]
 
 [node name="main" type="Node2D" unique_id=1943920957]
 script = ExtResource("1_cfdqf")
+pipe_scene = ExtResource("2_41s58")
 
 [node name="background" type="Sprite2D" parent="." unique_id=1278592954]
-position = Vector2(405.977, 168)
-scale = Vector2(-5.1704683, 1.4902345)
+position = Vector2(574.96564, 185.08876)
+scale = Vector2(-3.9969351, 1.4234816)
 texture = ExtResource("5_41s58")
 
 [node name="Ground" parent="." unique_id=271820433 instance=ExtResource("4_3if0j")]
@@ -18,3 +20,7 @@ position = Vector2(-359, 689)
 
 [node name="birds" parent="." unique_id=1901554004 instance=ExtResource("1_am3uj")]
 position = Vector2(135.00002, 32)
+
+[node name="PipeTimer" type="Timer" parent="." unique_id=1464458845]
+
+[connection signal="timeout" from="PipeTimer" to="." method="_on_pipe_timer_timeout"]
