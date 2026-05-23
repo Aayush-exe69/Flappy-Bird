@@ -1,7 +1,147 @@
 [gd_scene format=3 uid="uid://dibnfhfyuodov"]
 
+[ext_resource type="Script" uid="uid://b6i585k3f8nlf" path="res://scences/options.gd" id="1_h63sb"]
+[ext_resource type="Texture2D" uid="uid://ceyx8o6vjg4u6" path="res://assests/Character/Flappy_Bird_assets by kosresetr55/Game Objects/Setting.png" id="2_vmmb5"]
+[ext_resource type="FontFile" uid="uid://dargm0p877cw3" path="res://assests/Character/Flappy_Bird_assets by kosresetr55/UI/Numbers/grapesoda_2/GrapeSoda.ttf" id="3_mg1i4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mg1i4"]
+texture = ExtResource("2_vmmb5")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4wegi"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vmmb5"]
+bg_color = Color(0.4726752, 0.4726752, 0.4726752, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mg1i4"]
+bg_color = Color(0.62152386, 0.62152386, 0.6215238, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0n0rw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0n0rw"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_maywm"]
+bg_color = Color(0.6106829, 0.610683, 0.610683, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jvdn1"]
+bg_color = Color(0.53038955, 0.53038955, 0.53038955, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
 [node name="Options" type="Control" unique_id=488025474]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.5
+offset_top = -25.0
+offset_right = 86.5
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h63sb")
+
+[node name="Panel" type="Panel" parent="." unique_id=152770875]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -489.5
+offset_top = -298.0
+offset_right = 494.5
+offset_bottom = 298.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_mg1i4")
+
+[node name="Sound" type="Button" parent="." unique_id=1078878760]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -107.0
+offset_top = -111.0
+offset_right = 107.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_4wegi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vmmb5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mg1i4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0n0rw")
+text = "Music ON/OFF
+"
+
+[node name="HSlider" type="HSlider" parent="." unique_id=1464528192]
+layout_mode = 0
+offset_left = -18.5
+offset_top = 50.0
+offset_right = 201.5
+offset_bottom = 124.0
+
+[node name="Back" type="Button" parent="." unique_id=1768945953]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -108.0
+offset_top = 139.0
+offset_right = 118.0
+offset_bottom = 232.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_0n0rw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_maywm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jvdn1")
+theme_override_styles/focus = SubResource("StyleBoxFlat_0n0rw")
+text = "	Back
+"
+
+[node name="Label" type="Label" parent="." unique_id=2114155391]
+layout_mode = 0
+offset_left = -53.5
+offset_top = -227.0
+offset_right = 373.5
+offset_bottom = -24.0
+theme_override_fonts/font = ExtResource("3_mg1i4")
+theme_override_font_sizes/font_size = 100
+text = "Settings
+"
+
+[connection signal="pressed" from="Sound" to="." method="_on_sound_pressed"]
+[connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
