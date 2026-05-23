@@ -53,10 +53,11 @@ func start_game():
 
 func _process(delta: float) -> void:
 	if game_running:
-		scroll += SCROLL_SPEED 
-		if scroll >= screen_size.x:
-			scroll = 0 
-		$Ground.position.x = -scroll
+		$Ground.position.x -= SCROLL_SPEED
+
+		if $Ground.position.x <= -$Ground.get_node("Sprite2D").texture.get_width():
+			$Ground.position.x = 0
+
 		for pipe in pipes:
 			pipe.position.x -= SCROLL_SPEED
 
@@ -65,7 +66,7 @@ func _on_pipe_timer_timeout() -> void:
 	generate_pipes()
 	
 func generate_pipes():
-	var pipes = pipe_scene.instantiate()
+	var pipe = pipe_scene.instantiate()
 	pipe.position.x = screen_size.x + PIPE_DELAY
 	pipe.position.y = (screen_size.y - ground_height) / 2 + randi_range(-PIPE_RANGE, PIPE_RANGE)
 	pipe.hit.connect(bird_hit)
