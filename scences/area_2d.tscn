@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d4hp5c5lu18t5"]
 
-[ext_resource type="Script" uid="uid://p5c2qdjjw2ld" path="res://Pipe.gd" id="1_xai7j"]
+[ext_resource type="Script" uid="uid://cwgl2djnhdmpm" path="res://Pipe.gd" id="1_xai7j"]
 [ext_resource type="Texture2D" uid="uid://baclkiik31h1o" path="res://assests/Character/Flappy_Bird_assets by kosresetr55/Game Objects/pipe-green2.0.png" id="2_tsiar"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t1lia"]
@@ -14,6 +14,9 @@ size = Vector2(44, 478)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ht023"]
 size = Vector2(48, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xai7j"]
+size = Vector2(41, 183)
 
 [node name="Pipes" type="Area2D" unique_id=1224563426]
 script = ExtResource("1_xai7j")
@@ -47,4 +50,11 @@ shape = SubResource("RectangleShape2D_p6u5m")
 position = Vector2(-2, -44)
 shape = SubResource("RectangleShape2D_ht023")
 
+[node name="SCORE AREA" type="Area2D" parent="." unique_id=2066609858]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SCORE AREA" unique_id=1814801481]
+position = Vector2(91.5, -1.5)
+shape = SubResource("RectangleShape2D_xai7j")
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="SCORE AREA" to="." method="_on_score_area_body_entered"]

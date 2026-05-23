@@ -1,5 +1,7 @@
 extends Node
 
+signal hit
+
 @export var pipe_scene : PackedScene
 
 
@@ -22,6 +24,7 @@ const PIPE_RANGE : int = 200
 func _ready() -> void:
 	screen_size = get_window().size
 	ground_height = $Ground.get_node("Sprite2D").texture.get_height()
+	
 	new_game()
 
 func new_game():
@@ -29,6 +32,9 @@ func new_game():
 	game_over = false
 	score = 0
 	scroll = 0
+	$ScoreLabel.text = "SCORE: " + str(score)
+	$GameOver.hide()
+	get_tree().call_group("Pipes", "queue_free")
 	pipes.clear()
 	generate_pipes()
 	$birds.reset()
@@ -70,8 +76,13 @@ func generate_pipes():
 	pipe.position.x = screen_size.x + PIPE_DELAY
 	pipe.position.y = (screen_size.y - ground_height) / 2 + randi_range(-PIPE_RANGE, PIPE_RANGE)
 	pipe.hit.connect(bird_hit)
+	pipe.scored.connect(scored)
 	add_child(pipe)
 	pipes.append(pipe)
+
+func scored():
+	score += 1 
+	$ScoreLabel.text = "SCORE: " + str(score)
 	
 func check_top():
 	if $birds.position.y < 0:
@@ -80,10 +91,22 @@ func check_top():
 		
 func stop_game():
 	$PipeTimer.stop()
+	$GameOver.show()
 	$birds.flying = false
 	game_running = false
 	game_over = true
 	
-func bird_hit():
+func bird_hit():	
 	$birds.falling = true
 	stop_game()
+	
+
+
+func _on_ground_hit() -> void:
+	$birds.velocity = Vector2.ZERO
+	$birds.set_physics_process(false)
+	stop_game()
+
+
+func _on_game_over_restart() -> void:
+	new_game()

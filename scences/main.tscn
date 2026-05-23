@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://d4hp5c5lu18t5" path="res://scences/area_2d.tscn" id="2_41s58"]
 [ext_resource type="PackedScene" uid="uid://c7n27votr026b" path="res://scences/Ground.tscn" id="4_3if0j"]
 [ext_resource type="Texture2D" uid="uid://di7qssv0fn8li" path="res://assests/Character/Flappy_Bird_assets by kosresetr55/Game Objects/background-day.png" id="5_41s58"]
+[ext_resource type="PackedScene" uid="uid://bvatcy0oflbk0" path="res://scences/game_over.tscn" id="6_cfdqf"]
 
 [node name="main" type="Node2D" unique_id=1943920957]
 script = ExtResource("1_3if0j")
@@ -23,9 +24,22 @@ wait_time = 1.5
 
 [node name="Ground" parent="." unique_id=335426170 instance=ExtResource("4_3if0j")]
 z_index = 1
-position = Vector2(0, 428)
+position = Vector2(3, 134)
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=1483384633 groups=["Pipes"]]
+z_index = 1
+offset_left = 436.0
+offset_right = 597.0
+offset_bottom = 55.0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 40
+text = "SCORE:0"
+
+[node name="GameOver" parent="." unique_id=855875070 instance=ExtResource("6_cfdqf")]
 
 [node name="Pipes" parent="." unique_id=1224563426 instance=ExtResource("2_41s58")]
 position = Vector2(70, 1779)
 
 [connection signal="timeout" from="PipeTimer" to="." method="_on_pipe_timer_timeout"]
+[connection signal="hit" from="Ground" to="." method="_on_ground_hit"]
+[connection signal="restart" from="GameOver" to="." method="_on_game_over_restart"]
