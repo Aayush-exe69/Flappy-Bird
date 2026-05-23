@@ -11,9 +11,21 @@ config_version=5
 [application]
 
 config/name="Flappy Birds"
-run/main_scene="uid://efnkwl0fdjrv"
+run/main_scene="uid://loni8yvhqiid"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://basy1nx2nbaco"
+
+[autoload]
+
+Music="*uid://cs7u230ek5ll8"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 [physics]
 

@@ -1,0 +1,159 @@
+[gd_scene format=3 uid="uid://loni8yvhqiid"]
+
+[ext_resource type="Texture2D" uid="uid://b6grx8cq8pvxf" path="res://flap.png" id="1_7vrkn"]
+[ext_resource type="Script" uid="uid://bx8cn855m0opv" path="res://main_menu.gd" id="1_fu7sn"]
+[ext_resource type="FontFile" uid="uid://dargm0p877cw3" path="res://assests/Character/Flappy_Bird_assets by kosresetr55/UI/Numbers/grapesoda_2/GrapeSoda.ttf" id="2_fu7sn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vrkn"]
+texture = ExtResource("1_7vrkn")
+modulate_color = Color(0.7539839, 0.75398386, 0.75398386, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhts7"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.14)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jix8l"]
+bg_color = Color(0.5063436, 0.530544, 0.536721, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.14)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_glbon"]
+bg_color = Color(0.74837965, 0.74837965, 0.74837965, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.14)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nlkkf"]
+
+[node name="MainMenu" type="Control" unique_id=158086101]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fu7sn")
+
+[node name="Panel" type="Panel" parent="." unique_id=594779089]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_7vrkn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1211305172]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -214.0
+offset_top = -72.0
+offset_right = 184.0
+offset_bottom = 239.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 9
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=1735488207]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(2.4065375e-08, 0.16404298, 0.14852938, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_glbon")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nlkkf")
+text = "Start Game"
+
+[node name="Options" type="Button" parent="VBoxContainer" unique_id=2000054368]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(2.4065375e-08, 0.16404298, 0.14852938, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_glbon")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nlkkf")
+text = "Options
+"
+
+[node name="Sound" type="Button" parent="VBoxContainer/Options" unique_id=1813989061]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/Options" unique_id=165308268]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 16.0
+
+[node name="Back" type="Button" parent="VBoxContainer/Options" unique_id=1517901160]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Exit" type="Button" parent="VBoxContainer" unique_id=569314473]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(2.4065375e-08, 0.16404298, 0.14852938, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_glbon")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nlkkf")
+text = "Exit
+
+"
+
+[node name="Label" type="Label" parent="." unique_id=1362488273]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -326.0
+offset_top = -264.0
+offset_right = 367.0
+offset_bottom = -142.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/shadow_offset_y = 10
+theme_override_fonts/font = ExtResource("2_fu7sn")
+theme_override_font_sizes/font_size = 121
+text = "Flappy Bird"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_settings_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options/Sound" to="." method="_on_sound_pressed"]
+[connection signal="value_changed" from="VBoxContainer/Options/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="VBoxContainer/Options/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_3_pressed"]

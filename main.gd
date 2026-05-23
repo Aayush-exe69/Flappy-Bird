@@ -24,7 +24,9 @@ const PIPE_RANGE : int = 200
 func _ready() -> void:
 	screen_size = get_window().size
 	ground_height = $Ground.get_node("Sprite2D").texture.get_height()
-	
+
+	$Ground.hit.connect(_on_ground_hit)
+
 	new_game()
 
 func new_game():
@@ -38,6 +40,7 @@ func new_game():
 	pipes.clear()
 	generate_pipes()
 	$birds.reset()
+	$birds.set_physics_process(true)   # add this
 	
 func _input(event):
 	if game_over == false:
@@ -81,7 +84,7 @@ func generate_pipes():
 	pipes.append(pipe)
 
 func scored():
-	score += 1 
+	score += 1
 	$ScoreLabel.text = "SCORE: " + str(score)
 	
 func check_top():
