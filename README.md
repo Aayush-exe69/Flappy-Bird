@@ -1,10 +1,10 @@
 # Flappy Bird 
 
-Hi! This is my own version of the classic **Flappy Bird** game, made using the :contentReference[oaicite:0]{index=0} as a beginner project.
+Hi! This is my own version of the classic **Flappy Bird** game, made using the as a beginner project.
 
 This game was created to practice my game development skills and learn more about how 2D games work in Godot. It may look simple, but I learned a lot while building it.
 
-🎮 Play the game here: :contentReference[oaicite:1]{index=1}
+
 
 ---
 
@@ -27,7 +27,6 @@ The longer you survive, the harder it gets!
 ---
 
 ## Built With
-- :contentReference[oaicite:2]{index=2}
 - GDScript
 
 ---
@@ -51,10 +50,3 @@ As a beginner, this project taught me a lot and gave me confidence to build more
 
 ---
 
-## Feedback
-If you play the game, feel free to leave feedback or a rating on itch.io — it would really help me improve.
-
-Thanks for playing! 🐦
-[Ouch-shield]: https://img.shields.io/badge/Ouch!-tool-blue?label=Ouch!
-[Ouch-url]: https://github.com/ouch-org/ouch
-[time-screenshot]: https://cloud-l88kldf50-hack-club-bot.vercel.app/0image.png
