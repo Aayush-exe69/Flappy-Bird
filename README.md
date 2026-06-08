@@ -38,14 +38,7 @@ The longer you survive, the harder it gets!
 ---
 
 ## Why I Made This
-I built this game as part of my learning journey in game development.  
-It helped me understand:
-- Signals
-- Collision detection
-- Scene management
-- UI design
-- Basic game logic
-
+I built this game as part of my learning journey in game development.
 As a beginner, this project taught me a lot and gave me confidence to build more games.
 
 ---
