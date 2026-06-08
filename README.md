@@ -1,4 +1,4 @@
-# Flappy Bird 🐦
+# Flappy Bird 
 
 Hi! This is my own version of the classic **Flappy Bird** game, made using the :contentReference[oaicite:0]{index=0} as a beginner project.
 
