@@ -1,4 +1,4 @@
-<img width="1366" height="768" alt="Screenshot from 2026-06-29 12-51-46" src="https://github.com/user-attachments/assets/4a6adb08-bed9-42af-b2cf-153d9347408b" /># Flappy Bird 
+# Flappy Bird 
 
 Hi! This is my own version of the classic **Flappy Bird** game, made using the as a beginner project.
 
